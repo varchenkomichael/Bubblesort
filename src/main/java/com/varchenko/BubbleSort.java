@@ -1,10 +1,9 @@
 package com.varchenko;
 
-import java.util.Arrays;
-
 public class BubbleSort {
-    public static void main(String[] args) {
-        int[] arrayToSort = {5, 2, 1, 10, 50, 10};
+    public int[] sortArray(int[] arrayToSort) {
+        if (arrayToSort == null) return new int[] {};
+
         for (int i = 0; i < arrayToSort.length - 1; i++) {
             for (int j = 0; j < arrayToSort.length - 1; j++) {
                 if (arrayToSort[j] > arrayToSort[j + 1]) {
@@ -14,6 +13,6 @@ public class BubbleSort {
                 }
             }
         }
-        System.out.println(Arrays.toString(arrayToSort));
+        return arrayToSort;
     }
 }
